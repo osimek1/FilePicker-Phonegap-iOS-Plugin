@@ -26,6 +26,13 @@
         <param name="ios-package" value="FilePicker"/>
       </feature>
     </config-file>
+          
+    <config-file target="*-Debug.plist" parent="aps-environment">
+      <string>development</string>
+    </config-file>
+    <config-file target="*-Release.plist" parent="aps-environment">
+      <string>production</string>
+    </config-file>
 
     <header-file src="src/ios/FilePicker.h"/>
     <source-file src="src/ios/FilePicker.m"/>
