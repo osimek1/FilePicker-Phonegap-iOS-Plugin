@@ -27,11 +27,36 @@
       </feature>
     </config-file>
           
-    <config-file target="*-Debug.plist" parent="aps-environment">
-      <string>development</string>
+    <config-file target="Entitlements-Debug.plist" parent="com.apple.developer.icloud-container-identifiers">
+      <array>
+        <string>iCloud.$(CFBundleIdentifier)</string>
+      </array>
     </config-file>
-    <config-file target="*-Release.plist" parent="aps-environment">
-      <string>production</string>
+    <config-file target="Entitlements-Debug.plist" parent="com.apple.developer.icloud-services">
+      <array>
+        <string>CloudDocuments</string>
+      </array>
+    </config-file>
+    <config-file target="Entitlements-Debug.plist" parent="com.apple.developer.ubiquity-container-identifiers">
+      <array>
+        <string>iCloud.$(CFBundleIdentifier)</string>
+      </array>
+    </config-file>
+
+    <config-file target="Entitlements-Release.plist" parent="com.apple.developer.icloud-container-identifiers">
+      <array>
+        <string>iCloud.$(CFBundleIdentifier)</string>
+      </array>
+    </config-file>
+    <config-file target="Entitlements-Release.plist" parent="com.apple.developer.icloud-services">
+      <array>
+        <string>CloudDocuments</string>
+      </array>
+    </config-file>
+    <config-file target="Entitlements-Release.plist" parent="com.apple.developer.ubiquity-container-identifiers">
+      <array>
+        <string>iCloud.$(CFBundleIdentifier)</string>
+      </array>
     </config-file>
 
     <header-file src="src/ios/FilePicker.h"/>
